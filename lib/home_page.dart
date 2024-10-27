@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  final String username;
+
+  const HomePage({super.key, required this.username});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +21,10 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(
+      body: Center(
         child: Text(
-          'Welcome to Universitas Teknologi Bandung',
-          style: TextStyle(fontSize: 24),
+          'Hi, $username! Welcome to Universitas Teknologi Bandung',
+          style: const TextStyle(fontSize: 24),
         ),
       ),
     );
